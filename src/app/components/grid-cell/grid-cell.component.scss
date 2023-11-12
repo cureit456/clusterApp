@@ -1,0 +1,12 @@
+:host {
+    display: flex;
+    background-color: #656CA5;
+    padding: 10pt;
+    width: 100pt;
+    height: 100pt;
+    border-radius: 10pt;
+    box-shadow: 7px 14px 25px black;
+}
+:host:hover{
+    filter: contrast(150%);
+}

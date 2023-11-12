@@ -1,1 +1,32 @@
+
+
 <app-left-toolbar />
+
+@switch (clusterService.changeView()) {
+    @case (CLUSTER_MENU_VIEW) {
+        <app-cluster-page></app-cluster-page>
+    }
+    @case (CLUSTER_GRID_PAGES_VIEW) {
+        <app-cluster-grid-page></app-cluster-grid-page>
+    }
+    @default {
+        <app-cluster-page></app-cluster-page>
+    }
+  }
+  <dialog #dialogElement>
+    @switch (clusterService.changeDialogView()) {
+        @case (MONEY_PREVIEW_DIALOG_VIEW) {
+            <app-money-preview [currentMoneyId]=clusterService.selectedMoneyId()></app-money-preview>
+        }
+        @case (ADD_MONEY_DIALOG_VIEW) {
+            <app-add-money-dialog></app-add-money-dialog>
+        }
+        @case (ADD_CLUSTER_DIALOG_VIEW) {
+            <app-add-cluster-dialog></app-add-cluster-dialog>
+        }
+        @default {
+            <p>SOME ERROR</p>
+        }
+      }
+  
+  </dialog>

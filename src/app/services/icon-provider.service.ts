@@ -8,6 +8,8 @@ import { SvgIcon, icons } from '../../assets/icons/Icons';
 })
 export class IconProviderService {
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    console.log('test');
+
     icons.forEach((icon: SvgIcon) => {
       iconRegistry.addSvgIconLiteral(
         icon.iconTag,

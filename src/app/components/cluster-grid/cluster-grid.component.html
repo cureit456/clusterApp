@@ -1,0 +1,4 @@
+@for (cluster of clusterService.currentGridCollection(); track $index) {
+    <app-grid-cell [coinId]=cluster.id [imagePath]=cluster.texturePathFrontRevers></app-grid-cell>
+  }
+  @empty {}

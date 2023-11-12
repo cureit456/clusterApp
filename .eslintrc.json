@@ -29,7 +29,8 @@
           {
             "type": "element",
             "prefix": "app",
-            "style": "kebab-case"
+            "style": "kebab-case",
+            "endOfLine": "off"
           }
         ]
       }
@@ -43,7 +44,9 @@
         "plugin:@angular-eslint/template/accessibility",
         "plugin:prettier/recommended"
       ],
-      "rules": {}
+      "rules": {
+        "endOfLine": "off"
+      }
     }
   ]
 }

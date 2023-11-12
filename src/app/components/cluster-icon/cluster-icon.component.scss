@@ -1,14 +1,14 @@
-:host {
+:host{
     display: flex;
-    background-color: #656CA5;
-    flex: 0.1;
-    gap: 20pt;
-    padding-top: 10pt;
     flex-direction: column;
     align-items: center;
+    gap: 5pt;
+    color: white;
 }
+
 .app-cluster-button{
     border-radius: 10pt !important;
+    padding: 10pt;
 
     mat-icon {
         height: 80% !important;

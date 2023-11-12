@@ -1,6 +1,23 @@
-<button
+@if(clusterService.isGridToolbar()){
+  <button
+  class="app-cluster-button"
   mat-fab
   color="primary"
-  aria-label="Example icon button with a delete icon">
+  (click)=handleOnBackToMenuClick()>
+  <mat-icon svgIcon="arrow-back-icon"></mat-icon>
+</button>
+<button
+  class="app-cluster-button"
+  mat-fab
+  color="primary"
+  (click)=handleOnAddMoney()>
   <mat-icon svgIcon="add-icon"></mat-icon>
 </button>
+}@else{
+  <button (click)=onAddClick() class="app-cluster-button" mat-fab color="primary">
+    <mat-icon svgIcon="add-icon"></mat-icon>
+  </button>
+  
+}
+
+

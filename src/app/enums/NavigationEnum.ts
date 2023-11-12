@@ -1,0 +1,4 @@
+export enum NavigationEnum {
+    CLUSTER_MENU_VIEW = 'CLUSTER_MENU_VIEW',
+    CLUSTER_GRID_PAGES_VIEW = 'CLUSTER_GRID_PAGES_VIEW',
+}

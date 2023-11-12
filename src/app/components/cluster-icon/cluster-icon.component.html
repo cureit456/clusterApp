@@ -1,0 +1,16 @@
+<button
+  class="app-cluster-button"
+  mat-fab
+  color="primary"
+  (click)="handleOnButtonClick()"
+  [cdkContextMenuTriggerFor]="contextMenu">
+  <mat-icon svgIcon="book-icon"></mat-icon>
+</button>
+<span>{{ clusterTitle }}</span>
+
+<ng-template #contextMenu>
+  <div class="example-menu" cdkMenu>
+    <button class="example-menu-item" cdkMenuItem>Edit</button>
+    <button class="example-menu-item" cdkMenuItem>Delete</button>
+  </div>
+</ng-template>
