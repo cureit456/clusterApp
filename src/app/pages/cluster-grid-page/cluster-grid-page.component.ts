@@ -3,9 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ClusterService } from '../../services/cluster.service';
-import { NavigationEnum } from '../../enums/NavigationEnum';
 import { ClusterGridComponent } from '../../components/cluster-grid/cluster-grid.component';
-import { DialogNavigationEnum } from '../../enums/DialogNavigationEnum';
 
 @Component({
   selector: 'app-cluster-grid-page',

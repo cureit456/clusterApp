@@ -16,3 +16,27 @@
         fill:gold;
     }
 }
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    min-width: 85pt;
+}
+.menu-item{
+    background-color: #656CA5;
+    display: flex;
+    min-height: 25pt;
+    color: white;
+    padding: 5pt;
+    font-size: medium;
+    gap: 3pt;
+    justify-content: flex-start;
+    border: none !important;
+    align-items: center;
+
+    mat-icon {
+        fill:gold;
+    }
+}
+.menu-item:hover{
+    background-color: rgb(201, 200, 200);
+}

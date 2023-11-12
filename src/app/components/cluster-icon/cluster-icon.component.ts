@@ -34,6 +34,8 @@ export class ClusterIconComponent {
   @Input('clusterTitle')
   clusterTitle: string = '';
   @Input('clusterId') id!:string;
+  @Input('index') index!:number;
+
 
 
   constructor(private clusterService:ClusterService){
@@ -44,8 +46,10 @@ export class ClusterIconComponent {
     this.clusterService.selectedClusterId.set(this.id);
     this.clusterService.isGridToolbar.set(true);
     this.clusterService.changeView.set(NavigationEnum.CLUSTER_GRID_PAGES_VIEW);
-
-     
-    
+  
   }
+  onClusterDelete(){
+    this.clusterService.cluster().splice(this.index,1);
+    
+}
 }

@@ -1,5 +1,5 @@
 @for (cluster of clusterService.cluster(); track $index) {
-    <app-cluster-icon [clusterTitle]=cluster.clusterName [clusterId]=cluster.clusterId></app-cluster-icon>
+    <app-cluster-icon [index]=$index [clusterTitle]=cluster.clusterName [clusterId]=cluster.clusterId></app-cluster-icon>
   }
   @empty {}
 

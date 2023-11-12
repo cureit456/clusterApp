@@ -9,8 +9,8 @@
 <span>{{ clusterTitle }}</span>
 
 <ng-template #contextMenu>
-  <div class="example-menu" cdkMenu>
-    <button class="example-menu-item" cdkMenuItem>Edit</button>
-    <button class="example-menu-item" cdkMenuItem>Delete</button>
+  <div class="menu-container" cdkMenu>
+    <button class="menu-item" cdkMenuItem><mat-icon svgIcon="edit-icon"></mat-icon> Edit</button>
+    <button (click)="onClusterDelete()" class="menu-item" cdkMenuItem><mat-icon svgIcon="bin-icon"></mat-icon> Delete</button>
   </div>
 </ng-template>
