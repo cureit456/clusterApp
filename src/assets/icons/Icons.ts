@@ -23,6 +23,11 @@ const BACK_ARROW: SvgIcon = {
     inlineSvg: `<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>`
 }
 
+const EXIT_ICON: SvgIcon = {
+    iconTag:'exit-icon',
+    inlineSvg: `<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>`
+}
+
 export const icons: SvgIcon[] = [
-    ADD_ICON, BOOK_ICON, BACK_ARROW
+    ADD_ICON, BOOK_ICON, BACK_ARROW,EXIT_ICON
 ]

@@ -1,1 +1,15 @@
-<button (click)="handleCloseClick()">Exit</button>
+<div class="exit-container">
+    <span>Add Cluster</span>
+    <mat-icon (click)="handleCloseClick()" svgIcon="exit-icon"></mat-icon>
+</div>
+<form (ngSubmit)="handleCreateClick(form)" #form="ngForm">
+    <mat-form-field>
+        <mat-label>Cluster Name</mat-label>
+        <input matInput 
+         ngModel
+         required
+         name="clusterName">
+      </mat-form-field>
+      <button type="submit" mat-flat-button color="primary">Create</button>
+      <button (click)="handleCloseClick()" mat-flat-button color="primary">Cancel</button>
+</form>

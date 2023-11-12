@@ -41,7 +41,6 @@ export class ClusterIconComponent {
   }
 
   handleOnButtonClick():void {
-   
     this.clusterService.selectedClusterId.set(this.id);
     this.clusterService.isGridToolbar.set(true);
     this.clusterService.changeView.set(NavigationEnum.CLUSTER_GRID_PAGES_VIEW);

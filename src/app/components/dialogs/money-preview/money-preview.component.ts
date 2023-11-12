@@ -1,12 +1,13 @@
-import { Component, ElementRef, Renderer2, AfterViewInit, DoCheck, OnChanges, Input } from '@angular/core';
+import { Component, ElementRef, Renderer2, AfterViewInit, DoCheck, OnChanges, Input, ViewChild, AfterViewChecked } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import * as THREE from 'three';
 import { ClusterService } from '../../../services/cluster.service';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-money-preview',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatIconModule],
   templateUrl: './money-preview.component.html',
   styleUrl: './money-preview.component.scss'
 })
@@ -22,7 +23,6 @@ export class MoneyPreviewComponent implements OnChanges {
   @Input('currentMoneyId') moneyId : number = 0;
 
   constructor(private renderer2:Renderer2, private elRef:ElementRef, private clusterService :ClusterService){
-
     this._renderer = new THREE.WebGLRenderer();
     this._renderer.setSize( 700, 600 );
     this.renderer2.appendChild( this.elRef.nativeElement, this._renderer.domElement );
@@ -51,8 +51,6 @@ export class MoneyPreviewComponent implements OnChanges {
   }
 
   ngOnChanges(): void {
-
-    console.log(this.moneyId);
 
     if(this.moneyId){
   
@@ -107,7 +105,7 @@ export class MoneyPreviewComponent implements OnChanges {
       roughness:0.3,
     })
 
-    const geometry = new THREE.CylinderGeometry(3,3,0.4,100);
+    const geometry = new THREE.CylinderGeometry(3.5,3.5,0.3,50);
 
     this._mesh = new THREE.Mesh(geometry,[material1,material1, material2])
   }

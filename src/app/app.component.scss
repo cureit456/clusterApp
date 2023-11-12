@@ -5,6 +5,8 @@
 }
 dialog{
     background-color: #656CA5;
+    border: none !important;
+    border-radius: 10pt;
 }
 dialog::backdrop {
     backdrop-filter: blur(5px);

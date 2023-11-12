@@ -35,16 +35,12 @@ export class AppComponent implements AfterViewInit {
   public readonly ADD_CLUSTER_DIALOG_VIEW = 'ADD_CLUSTER_DIALOG_VIEW';
   public readonly ADD_MONEY_DIALOG_VIEW = 'ADD_MONEY_DIALOG_VIEW';
   
-
-  
   @ViewChild('dialogElement') dialogElement!: ElementRef<HTMLDialogElement>;
   title = 'clusterApp';
 
 
   constructor(private iconProvider: IconProviderService, public clusterService: ClusterService ) {
-    effect(() => {
-      console.log(`The count is: ${clusterService.selectedClusterId()})`);
-    });
+   
   }
 
   ngAfterViewInit(){
