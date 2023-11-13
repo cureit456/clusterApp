@@ -1,4 +1,27 @@
 :host{
+    min-height: 300pt;
+    min-width: 250pt;
+    padding: 10pt;
     display: flex;
     flex-direction: column;
+    gap: 10pt;
+}
+.exit-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 5pt;
+    color: white;
+    border-bottom: 1pt solid gold;
+}
+mat-icon{
+    fill:gold;
+}
+mat-icon:hover{
+    border-radius: 10pt;
+    fill:#FEF0A5;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10pt;
 }

@@ -1,3 +1,9 @@
-<div (click)="handleOnCoinClick()" class="cell-container">
+<div [cdkContextMenuTriggerFor]="contextMenu" (click)="handleOnCoinClick()" class="cell-container">
     <img witdth="130px" height="130px" [src]=imagePath>
 </div>
+<ng-template #contextMenu>
+    <div class="menu-container" cdkMenu>
+      <button (click)="onCoinDelete()" class="menu-item" cdkMenuItem><mat-icon svgIcon="bin-icon"></mat-icon> Delete</button>
+    </div>
+  </ng-template>
+  

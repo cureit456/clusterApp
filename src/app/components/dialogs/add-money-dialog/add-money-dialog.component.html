@@ -1,4 +1,15 @@
-<button (click)="handleCloseClick()">Exit</button>
 
-  <input type="file" class="file-upload" (change)=onChoseFile($event)>
-  <input type="file" class="file-upload" (change)=onChoseFile($event)>
+<div class="exit-container">
+  <span>Add Test Coin</span>
+  <mat-icon (click)="handleCloseClick()" svgIcon="exit-icon"></mat-icon>
+</div>
+<form (ngSubmit)="handleCreateClick(form)" #form="ngForm">
+  <mat-form-field>
+      <mat-label>add test coin</mat-label>
+      <input matInput 
+       ngModel
+       name="clusterName">
+    </mat-form-field>
+    <button type="submit" mat-flat-button color="primary">Create</button>
+    <button type="button" (click)="handleCloseClick()" mat-flat-button color="primary">Cancel</button>
+</form>

@@ -39,9 +39,12 @@ export class AppComponent implements AfterViewInit {
   title = 'clusterApp';
 
 
-  constructor(private iconProvider: IconProviderService, public clusterService: ClusterService ) {
-   
+  constructor(private iconProvider: IconProviderService, public clusterService: ClusterService, private elRef:ElementRef<HTMLElement>) {
+    elRef.nativeElement.addEventListener('contextmenu',(event:Event)=>{
+      event.preventDefault();
+    });
   }
+
 
   ngAfterViewInit(){
     this.clusterService.dialogElement = this.dialogElement;
